@@ -1,0 +1,58 @@
+.padre{
+    background-color: darkgrey;
+    padding: 20px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 2fr 1fr auto auto 1fr;
+    grid-template-areas:    "header header header"
+                            "nav nav nav"
+                            "cont1 cont2 ads1"
+                            "cont1 cont2 ads2"
+                            "footer footer footer";
+}
+.padre .header{
+    background-color: antiquewhite;
+    grid-area: header;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.padre .nav{
+    background-color: beige;
+    grid-area: nav;
+}
+.padre .cont1{
+    background-color: aqua;
+    grid-area: cont1;
+}
+.padre .cont2{
+    background-color: aquamarine;
+    grid-area: cont2;
+}
+.padre .ads1{
+    background-color: blueviolet;
+    grid-area: ads1;
+}
+.padre .ads2{
+    background-color: blueviolet;
+    grid-area: ads2;
+}
+.padre .footer{
+    background-color: blue;
+    grid-area: footer;
+}
+ol{
+    list-style-type: none;
+}
+@media screen and (max-width:768px){
+    .padre{
+        grid-template-areas:    "header header header"
+                                "nav nav nav"
+                                "cont1 cont1 cont1"
+                                "cont2 cont2 cont2"
+                                "ads1 ads1 ads2"
+                                "footer footer footer";
+    }
+}
